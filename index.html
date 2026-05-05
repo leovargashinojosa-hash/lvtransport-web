@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>LV Transport | Taxi Antwerpen 24/7</title>
+  <meta name="description" content="LV Transport - Taxi Antwerpen, luchthavenvervoer, zakelijke ritten en lange afstand. 24/7 beschikbaar.">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#home" class="brand-logo" aria-label="LV Transport">
+      <img src="images/logo-lv.png" alt="LV Transport logo" width="130">
+    </a>
+
+    <nav class="main-nav">
+      <a href="#diensten">Diensten</a>
+      <a href="#boeken">Boeken</a>
+      <a href="#tracking">Volg uw taxi</a>
+      <a href="#prijzen">Prijzen</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="btn btn-outline" href="tel:+32466487936">☎ Bel nu</a>
+      <a class="btn btn-gold" href="https://wa.me/32466487936" target="_blank" rel="noopener">WhatsApp</a>
+      <button class="btn btn-outline admin-login-btn" id="adminLoginBtn" type="button">Admin</button>
+    </div>
+  </div>
+</header>
+
+<main id="home">
+
+  <section class="hero">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <div class="hero-text reveal">
+        <span class="eyebrow">TAXI</span>
+        <h1>Antwerpen <span>24/7 service</span></h1>
+        <p>Uw rit in Antwerpen en heel België, verzorgd met discretie, klasse en professionaliteit.</p>
+
+        <div class="hero-buttons">
+          <a href="#boeken" class="btn btn-gold">Reserveer uw rit</a>
+          <button class="btn btn-outline" type="button" onclick="quickWhatsApp('Prijsaanvraag via hero')">Vraag via WhatsApp</button>
+        </div>
+      </div>
+
+      <section class="booking-card reveal" id="boeken">
+        <h2>Reserveer uw rit</h2>
+
+        <form id="bookingForm">
+          <div class="form-grid">
+            <label>
+              <span>📅 Datum</span>
+              <input type="date" id="datum" required>
+            </label>
+
+            <label>
+              <span>🕒 Tijd</span>
+              <input type="time" id="tijd" required>
+            </label>
+
+            <label>
+              <span>👤 Naam</span>
+              <input type="text" id="naam" placeholder="Naam" required>
+            </label>
+
+            <label>
+              <span>📞 Telefoon</span>
+              <input type="tel" id="telefoon" placeholder="Telefoon" required>
+            </label>
+
+            <label>
+              <span>📍 Van</span>
+              <input type="text" id="van" placeholder="Ophaaladres" required>
+            </label>
+
+            <label>
+              <span>📍 Naar</span>
+              <input type="text" id="naar" placeholder="Bestemming" required>
+            </label>
+
+            <label>
+              <span>🚘 Type rit</span>
+              <select id="typeRit" required>
+                <option value="">Selecteer rit</option>
+                <option>Taxi Antwerpen</option>
+                <option>Luchthaventransfer</option>
+                <option>Zakelijk vervoer</option>
+                <option>Haven transport</option>
+                <option>Lange afstand</option>
+              </select>
+            </label>
+
+            <button class="btn btn-gold form-button" type="submit">Reserveer uw rit</button>
+          </div>
+        </form>
+
+        <div class="trust-row">
+          <div><span>24/7</span> beschikbaar</div>
+          <div><span>✓</span> Directe bevestiging</div>
+          <div><span>🛡</span> Veilig & betrouwbaar</div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="priority-section">
+    <div class="priority-text reveal">
+      <h2>Uw reis, onze prioriteit</h2>
+      <p>LV Transport staat voor kwaliteit, discretie en stiptheid. Wij zorgen ervoor dat u ontspannen, veilig en comfortabel op uw bestemming aankomt.</p>
+    </div>
+
+    <div class="feature-list reveal">
+      <div class="feature-item">
+        <div class="feature-icon">👨‍✈️</div>
+        <div><strong>Vergunde chauffeurs</strong><p>Professioneel, discreet en ervaren.</p></div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">🚘</div>
+        <div><strong>Luxe & comfort</strong><p>Moderne wagens met maximaal comfort.</p></div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">💶</div>
+        <div><strong>Vaste prijzen</strong><p>Transparant, zonder verborgen kosten.</p></div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">💳</div>
+        <div><strong>Betaling mogelijk</strong><p>Contant, kaart of via factuur.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="diensten" class="services-section">
+    <h2 class="section-title reveal">Onze diensten</h2>
+
+    <div class="cards">
+      <article class="service-card reveal">
+        <div class="service-icon">🚖</div>
+        <h3>Taxi Antwerpen</h3>
+        <p>Snel en comfortabel vervoer in Antwerpen en omgeving.</p>
+        <button type="button" onclick="quickWhatsApp('Taxi Antwerpen')" class="mini-btn">Taxi boeken</button>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="service-icon">✈️</div>
+        <h3>Luchthaventransfer</h3>
+        <p>Transfers naar Zaventem, Charleroi, Eindhoven, Schiphol en andere luchthavens.</p>
+        <button type="button" onclick="quickWhatsApp('Luchthaventransfer')" class="mini-btn">Airport rit boeken</button>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="service-icon">💼</div>
+        <h3>Zakelijk vervoer</h3>
+        <p>Professioneel vervoer voor bedrijven, meetings, events en VIP-klanten.</p>
+        <button type="button" onclick="quickWhatsApp('Zakelijk vervoer')" class="mini-btn">Zakelijke rit aanvragen</button>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="service-icon">⚓</div>
+        <h3>Haven transport</h3>
+        <p>Vervoer van en naar de haven van Antwerpen voor personeel en bezoekers.</p>
+        <button type="button" onclick="quickWhatsApp('Haven transport')" class="mini-btn">Havenrit boeken</button>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="service-icon">🛣️</div>
+        <h3>Lange afstand</h3>
+        <p>Comfortabele ritten naar elke bestemming in België en Europa.</p>
+        <button type="button" onclick="quickWhatsApp('Lange afstand')" class="mini-btn">Prijs aanvragen</button>
+      </article>
+    </div>
+  </section>
+
+  <section class="quick-strip">
+    <div class="quick-item"><span>24</span><strong>24/7 Service</strong><p>Dag en nacht bereikbaar.</p></div>
+    <div class="quick-item"><span>📍</span><strong>Antwerpen & omgeving</strong><p>Actief in heel Antwerpen.</p></div>
+    <div class="quick-item"><span>💳</span><strong>Betaling mogelijk</strong><p>Cash, kaart of factuur.</p></div>
+    <a href="https://wa.me/32466487936" target="_blank" rel="noopener" class="btn btn-green">Chat via WhatsApp</a>
+  </section>
+
+  <section id="prijzen" class="prices-section">
+    <h2 class="section-title reveal">Prijzen</h2>
+
+    <div class="prices-grid">
+      <article class="price-card reveal"><span>✈️</span><h3>Zaventem</h3><div>€80</div><button type="button" onclick="quickDestination('Zaventem','€80')">Reserveer</button></article>
+      <article class="price-card reveal"><span>✈️</span><h3>Eindhoven</h3><div>€130</div><button type="button" onclick="quickDestination('Eindhoven','€130')">Reserveer</button></article>
+      <article class="price-card reveal"><span>✈️</span><h3>Charleroi</h3><div>€150</div><button type="button" onclick="quickDestination('Charleroi','€150')">Reserveer</button></article>
+      <article class="price-card reveal"><span>✈️</span><h3>Schiphol</h3><div>€200</div><button type="button" onclick="quickDestination('Schiphol','€200')">Reserveer</button></article>
+      <article class="price-card reveal"><span>🏙️</span><h3>Mechelen</h3><div>€45</div><button type="button" onclick="quickDestination('Mechelen','€45')">Reserveer</button></article>
+      <article class="price-card reveal"><span>🏙️</span><h3>Brussel</h3><div>€80</div><button type="button" onclick="quickDestination('Brussel','€80')">Reserveer</button></article>
+      <article class="price-card reveal"><span>🏙️</span><h3>Breda</h3><div>€95</div><button type="button" onclick="quickDestination('Breda','€95')">Reserveer</button></article>
+      <article class="price-card reveal"><span>🏙️</span><h3>Gent</h3><div>€100</div><button type="button" onclick="quickDestination('Gent','€100')">Reserveer</button></article>
+      <article class="price-card reveal"><span>🏙️</span><h3>Rotterdam</h3><div>€150</div><button type="button" onclick="quickDestination('Rotterdam','€150')">Reserveer</button></article>
+      <article class="price-card reveal"><span>🏙️</span><h3>Brugge</h3><div>€165</div><button type="button" onclick="quickDestination('Brugge','€165')">Reserveer</button></article>
+    </div>
+
+    <p class="price-note">Vaste prijs — geen verrassingen · Prijzen kunnen variëren afhankelijk van verkeer en tijdstip.</p>
+  </section>
+
+  <section id="tracking" class="tracking-section">
+    <div class="tracking-card reveal">
+      <h2>Volg uw taxi</h2>
+      <p>Heeft u een rit gereserveerd? Vul uw reserveringscode in om uw taxi te volgen zodra de chauffeur de route start.</p>
+
+      <div class="tracking-input">
+        <input id="bookingCode" placeholder="Bijvoorbeeld: LV123">
+        <button class="btn btn-gold" type="button" onclick="startTracking()">Taxi volgen</button>
+      </div>
+
+      <div class="map-box" id="mapBox">
+        <div id="googleMap" class="google-map"></div>
+        <div class="route-line"></div>
+        <div class="taxi-dot">🚕</div>
+        <div class="map-message">Google Maps tracking komt hier.</div>
+      </div>
+
+      <p class="tracking-note">Live tracking met Google Maps API + Firebase.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer id="contact" class="footer">
+  <div>
+    <img src="images/logo-lv.png" alt="LV Transport Logo" class="footer-logo">
+    <p>Betrouwbaar taxi vervoer in Antwerpen en heel België. Discreet en altijd tot uw dienst.</p>
+  </div>
+
+  <div>
+    <h4>Contact</h4>
+    <p>☎ +32 466 48 79 36</p>
+    <p>✉ info@lvtransport.be</p>
+    <p>🌐 www.lvtransport.be</p>
+  </div>
+
+  <div>
+    <h4>Informatie</h4>
+    <p>Over ons</p>
+    <p>Diensten</p>
+    <p>Tarieven</p>
+    <p>Contact</p>
+  </div>
+
+  <div>
+    <h4>Bedrijfsgegevens</h4>
+    <p>LV Transport</p>
+    <p>BTW: BE 1036.807.066</p>
+    <p>Erkende vervoeronderneming</p>
+  </div>
+</footer>
+
+<!-- CHATBOT LV TRANSPORT PRO -->
+<div id="lv-chatbot">
+  <button id="chat-toggle" aria-label="Open LV Transport chat">
+    💬 <span>Chat</span>
+  </button>
+
+  <div id="chat-box" aria-live="polite">
+    <div id="chat-header">
+      <div>
+        <strong>LV Transport</strong>
+        <small>Online assistant</small>
+      </div>
+      <button id="chat-close" type="button" aria-label="Close chat">×</button>
+    </div>
+
+    <div id="chat-messages">
+      <div class="chat-message bot">
+        Hallo 👋 Ik ben de assistent van LV Transport. Wilt u een taxi reserveren?
+      </div>
+
+      <div class="chat-actions">
+        <button type="button" data-msg="Ik wil een taxi reserveren">Taxi reserveren</button>
+        <button type="button" data-msg="Ik heb luchthavenvervoer nodig">Luchthaven</button>
+        <button type="button" data-msg="Wat zijn de prijzen?">Prijzen</button>
+      </div>
+    </div>
+
+    <form id="chat-form">
+      <input id="chat-input" type="text" placeholder="Schrijf uw bericht..." autocomplete="off" />
+      <button type="submit">Verstuur</button>
+    </form>
+  </div>
+</div>
+
+<a href="https://wa.me/32466487936" target="_blank" rel="noopener" class="floating-whatsapp">💬</a>
+
+<!-- Firebase compat: necesario para script.js sin type="module" -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+
+<!-- JS principal -->
+<script src="script.js"></script>
+
+<!-- Google Maps -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQvPZgxzplELeO4AfWKnnK4dxp39pzwlw&callback=initMap" async defer></script>
+
+</body>
+</html>
